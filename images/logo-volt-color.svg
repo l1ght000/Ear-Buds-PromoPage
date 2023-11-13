@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.66 218.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: ROGFonts-Regular, 'ROG Fonts';
+        font-size: 115.75px;
+      }
+
+      .cls-2 {
+        fill: #f7931e;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="m244,0c9.11,36.35,18.22,72.7,27.33,109.05,7.57-6.21,15.14-12.43,22.72-18.64,16.91,29.42,33.83,58.85,50.74,88.27-12.09-42.7-24.17-85.4-36.26-128.11-7.05,5.12-14.11,10.24-21.16,15.35-14.46-21.98-28.91-43.95-43.37-65.93Z"/>
+  <text class="cls-1" transform="translate(0 132.45)"><tspan x="0" y="0">V</tspan></text>
+  <text class="cls-1" transform="translate(123 132.45)"><tspan x="0" y="0">O</tspan></text>
+  <text class="cls-1" transform="translate(345 132.45)"><tspan x="0" y="0">T</tspan></text>
+</svg>

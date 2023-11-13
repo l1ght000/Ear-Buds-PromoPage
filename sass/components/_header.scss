@@ -1,0 +1,179 @@
+ 
+$navbar-color: rgb(0, 0, 0);
+$text-color: rgb(255, 255, 255);
+$mobile-breakpoint: 768px; 
+$secondary-color: #F7931E;
+
+
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: $navbar-color;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 1rem 100px;
+  z-index: 1000;
+  font-size: 15px;
+  
+  .logo {
+    img {
+      display: block;
+      height: 30px; 
+      width: 100%;
+    }
+
+    .logo-text {
+      display: none;
+    }
+  }
+
+  .hamburger-menu {
+    cursor: pointer;
+    span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: $text-color;
+      margin: 4px 0;
+    }
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $navbar-color;
+
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+
+      .theme-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+    .icon {
+        font-size: 1.5rem; 
+        opacity: 1; 
+        transition: opacity 0.3s;
+        margin-right: 10px;
+        color: $text-color; 
+    }
+}
+
+      li {
+        text-align: center;
+        padding: 1rem 0;
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &.active {
+      display: block;
+    }
+     .buy-now{
+            a{
+                background-color: #F7931E;
+                border-radius: 30px;
+                padding: 9px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+    }
+    
+  }
+
+  @media(min-width: $mobile-breakpoint) {
+    padding: 0.1rem 100px;
+    .nav-links {
+  li:not(.buy-now) {
+    a { 
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      color: $text-color;
+      transition: color 0.3s ease;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $text-color;
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        color: darken($text-color, 10%);
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+    .buy-now{
+            a{
+                background-color: #F7931E;
+                border-radius: 30px;
+                padding: 9px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+    }
+    .buy-now{
+        a:hover{
+            background-color: #b96d17;
+            transition: background-color 0.5s ease, color 0.5s ease;
+
+        }
+    }
+
+    .logo .logo-text {
+      display: block;
+      color: $text-color;
+    }
+    .logo {
+    img {
+      display: block;
+      height: 47px; 
+      width: 100%;
+    }
+    }
+
+    .hamburger-menu {
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      position: relative;
+      width: auto; 
+
+      .nav-links {
+        flex-direction: row;
+        gap: 55px;
+        letter-spacing: 4px;
+        justify-content: flex-end;
+      }
+      .icon{
+        justify-content: center;
+      }
+    }
+  }
+}
