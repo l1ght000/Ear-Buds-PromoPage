@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
-    min-height: calc(100vh - 120px); // Adjust this value based on the height of your header and footer
+    min-height: calc(100vh - 120px); 
 
     .contact-form-container {
         max-width: 600px;
@@ -59,12 +59,16 @@
     }
 }
 
-// Add responsive rules if necessary
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .contact-container {
         padding: 1rem;
         .contact-form-container {
             padding: 1rem;
+        }
+    }
+    .contact-form-container{
+        input{
+            width: 600px;
         }
     }
 }
