@@ -1,0 +1,89 @@
+$footer-text-color: white;
+
+.volt-footer {
+    background-color: black;
+    color: $footer-text-color;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo img {
+        height: 50px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-nav {
+        a {
+            color: $footer-text-color;
+            text-decoration: none;
+            margin: 0 10px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $footer-text-color;
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: darken($footer-text-color, 10%);
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .footer-social {
+        a {
+            color: $footer-text-color;
+            margin: 0 5px;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: darken($footer-text-color, 10%);
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 0.8em;
+    }
+}
+
+@media (min-width: 768px) {
+    .volt-footer {
+        .footer-content {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .footer-logo {
+            align-self: flex-start;
+        }
+
+        .footer-nav {
+            align-self: center;
+        }
+
+        .footer-social {
+            align-self: flex-end;
+        }
+    }
+}

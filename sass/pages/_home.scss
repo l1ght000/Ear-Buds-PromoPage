@@ -1,0 +1,218 @@
+$navbar-color: rgb(0, 0, 0);
+$text-color: rgb(255, 255, 255);
+$mobile-breakpoint: 768px; 
+$secondary-color: #F7931E;
+$hover-color: #b96d17;
+$paragraph-color: #a5a5a5;
+
+body{
+  background-color: black;
+}
+
+.intro {
+  height: 100vh;
+
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px; 
+  }
+}
+
+.links-container {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; 
+  gap: 15px;
+
+  a {
+    color: rgb(0, 0, 0);
+    font-size: 16px; 
+    text-decoration: none;
+    background-color: $secondary-color;
+    border-radius: 30px;
+    padding: 7px 12px;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: $hover-color;
+      color: white;
+    }
+  }
+}
+
+section {
+  height: 100vh;
+  color: black;
+
+  #Revolutionary {
+    padding-top: 100px; 
+    font-size: 70px; 
+    text-align: center;
+    color: white;
+  }
+}
+
+@media (min-width: $mobile-breakpoint) {
+
+
+  .intro h1 {
+    font-size: 90px; 
+  }
+
+  .links-container {
+    top: 90%;
+    flex-direction: row; 
+    gap: 30px;
+
+    a {
+      font-size: 20px; 
+      padding: 9px 15px;
+    }
+  }
+
+  section h1 {
+    padding-top: 300px; 
+  }
+}
+
+.details-text{
+  h2{
+    font-size: 30px; 
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+  }
+  p{
+    font-size: 20px; 
+    text-align: center;
+    color: white;
+    padding: 10px;
+    color: #a5a5a5;
+  }
+}
+
+
+.full-width-video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+
+  video {
+    position: absolute;
+    top: 43%; // Should be 0 to cover the entire section
+    left: 0;
+    width: 100%;
+    height: 400px; // Should be 100% to cover the entire section
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  h1 {
+    position: absolute; // Ensure h1 is also positioned absolutely
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px; 
+    text-align: center;
+    color: white;
+    z-index: 2; // Ensure the h1 appears above the video
+  }
+}
+
+
+#Audio-text{
+  h3{
+    color: $paragraph-color;
+    font-size: 40px;
+    padding: 0.5rem;
+  }
+  h1{
+    color: white;
+    font-size: 90px;
+    padding: 0.5rem;
+  }
+  p{
+    color: $paragraph-color;
+    font-size: 20px;
+    word-spacing: 5px;
+    width: 600px;
+    padding: 0.5rem;
+  }
+}
+
+
+.feature-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black; // or your preferred background color
+  color: white;
+  padding: 50px; // Adjust padding as needed
+  margin-top: -350px;
+
+  .feature-image {
+    width: 40%;
+    img {
+      width: 90%;
+    }
+  }
+
+  .feature-content {
+    width: 40%;
+    h2 {
+      font-size: 3rem; 
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.6rem;
+      color: $paragraph-color;
+      strong {
+        color: $secondary-color; 
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .feature-section {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0px;
+
+    .feature-image, .feature-content {
+      width: 100%;
+    }
+  }
+}
+
+#side-earbud{
+  .highlight {
+        color: $secondary-color; 
+      }
+
+      margin-top: 20px;
+}
+
+#AR-title{
+  h1{
+    font-size: 70px;
+    color: white;
+    text-align: center;
+  }
+}
